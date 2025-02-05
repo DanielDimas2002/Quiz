@@ -1,0 +1,14 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" rx="20" ry="20" fill="#1e1e1e"/>
+  <circle cx="100" cy="60" r="40" fill="#ffdd57"/>
+  <text x="100" y="75" text-anchor="middle" fill="#1e1e1e" font-size="50px" font-family="Arial">?</text>
+  
+  <rect x="20" y="120" width="50" height="50" rx="8" ry="8" fill="#e34c26"/>
+  <text x="45" y="155" text-anchor="middle" fill="#ffffff" font-size="30px" font-family="Arial">HTML</text>
+
+  <rect x="75" y="120" width="50" height="50" rx="8" ry="8" fill="#2965f1"/>
+  <text x="100" y="155" text-anchor="middle" fill="#ffffff" font-size="30px" font-family="Arial">CSS</text>
+
+  <rect x="130" y="120" width="50" height="50" rx="8" ry="8" fill="#f0db4f"/>
+  <text x="155" y="155" text-anchor="middle" fill="#323330" font-size="30px" font-family="Arial">JS</text>
+</svg>
