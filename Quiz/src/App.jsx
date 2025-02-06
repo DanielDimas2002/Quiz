@@ -1,8 +1,8 @@
 import { useContext } from 'react'
 import Welcome from './components/Welcome'
 import Question from './components/Question'
-import './App.css'
 import { QuizContext } from './context/quiz'
+import './App.css'
 
 
 function App() {
@@ -13,8 +13,8 @@ function App() {
   return (
     <div className = "App">
       <h1>Quiz de Programação</h1>
-      {quizState.gameState == "Start" && <Welcome/>}
-      {quizState.gameState == "Playing" && <Question/>}
+      {quizState.gameStage === "Start" && <Welcome/>}
+      {quizState.gameStage === "Playing" && <Question/>}
    </div>
   )
 }
