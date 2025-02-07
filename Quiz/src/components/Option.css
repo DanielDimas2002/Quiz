@@ -1,0 +1,19 @@
+.option{
+    border-radius: .5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 0.4s;
+    background-color: #404040;
+    color: #ffffff;
+}
+
+.option:hover{
+    opacity: 1;
+}
+
+#options-container .option p{
+    margin-bottom: 0;
+}
+
