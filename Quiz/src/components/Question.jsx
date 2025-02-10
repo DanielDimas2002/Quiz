@@ -13,7 +13,7 @@ const Question = () => {
     console.log(selectedOption);
     dispatch({
       type: "CHECK_ANSWER",
-      payload: selectedOption,
+      payload: { answer: currentQuestion.answer, option: selectedOption }, 
     });
   };
 
