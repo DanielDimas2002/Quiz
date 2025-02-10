@@ -1,22 +1,39 @@
-import { useContext } from "react"
-import { QuizContext } from "../context/quiz"
-import GG from "../img/GameOver.svg"
+// Importando o hook useContext para acessar o estado global do Quiz
+import { useContext } from "react";
+// Importando o contexto Quiz para acessar o estado global do quiz
+import { QuizContext } from "../context/quiz";
+// Importando a imagem que será exibida quando o jogo terminar
+import GG from "../img/GameOver.svg";
 
-import "./GameOver.css"
+// Importando o arquivo de estilo para o componente GameOver
+import "./GameOver.css";
 
-const GamerOver = () =>{
+const GamerOver = () => {
+  // Acessando o estado global do quiz usando o contexto
+  const [quizState, dispatch] = useContext(QuizContext);
 
-    const [quizState, dispatch] =  useContext(QuizContext)
+  return (
+    <div id="gameover">
+      {/* Título exibido ao fim do jogo */}
+      <h2>Fim de Jogo!</h2>
+      
+      {/* Exibindo a pontuação final do usuário */}
+      <p>Pontuação: {quizState.score}</p>
 
-    return(
-        <div id="gameover">
-            <h2>Fim de Jogo!</h2>
-            <p>Pontuação: {quizState.score}</p>
-            <p>Você acertou {quizState.score} de {quizState.questions.length}{" "} perguntas.</p>
-            <img src={GG} alt="Fim do Quiz"/>
-            <button onClick = {() => dispatch({ type: "NEW_GAME"})}>Reiniciar</button>
-        </div>
-    )
-}
+      {/* Exibindo o número de respostas corretas comparado com o total de perguntas */}
+      <p>
+        Você acertou {quizState.score} de {quizState.questions.length} perguntas.
+      </p>
 
-export default GamerOver
+      {/* Imagem que será mostrada ao usuário no fim do jogo */}
+      <img src={GG} alt="Fim do Quiz" />
+      
+      {/* Botão para reiniciar o jogo, que aciona o tipo de ação "NEW_GAME" */}
+      <button onClick={() => dispatch({ type: "NEW_GAME" })}>
+        Reiniciar
+      </button>
+    </div>
+  );
+};
+
+export default GamerOver;
